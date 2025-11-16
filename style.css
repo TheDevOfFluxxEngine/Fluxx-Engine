@@ -1,214 +1,73 @@
-/* Reset & General Styles */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    font-family: 'Rajdhani', sans-serif;
-    background: #0D1B2A;
-    color: #fff;
-    scroll-behavior: smooth;
+    background-color: #0e0e0e;
+    color: white;
 }
 
-/* Navigation */
-nav {
+header {
+    width: 100%;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    background: rgba(13,27,42,0.95);
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
-nav .logo {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 28px;
-    color: #00FFF0;
+.logo {
+    height: 40px;
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-.nav-links li a {
+nav a {
+    color: rgb(220, 220, 220);
     text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    transition: 0.3s;
+    margin-left: 20px;
+    font-size: 16px;
 }
 
-.nav-links li a:hover {
-    color: #00FFF0;
+nav a:hover {
+    color: white;
 }
 
-/* Mobile Menu */
-.menu-toggle {
-    display: none;
-    font-size: 28px;
+.hero {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #cfcfcf;
+}
+
+button {
+    margin-top: 30px;
+    padding: 14px 30px;
+    font-size: 18px;
+    border: none;
     cursor: pointer;
-    color: #00FFF0;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        background: rgba(13,27,42,0.95);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 15px;
-        border-radius: 8px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
-
-/* Hero Section */
-#hero {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(135deg, #0D1B2A 0%, #1B263B 100%);
-    padding: 0 20px;
-}
-
-#hero h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 64px;
-    color: #00FFF0;
-}
-
-#hero p {
-    font-size: 24px;
-    color: #39FF14;
-    margin: 15px 0 30px;
-}
-
-.hero-buttons .btn {
-    text-decoration: none;
-    padding: 12px 25px;
-    margin: 0 10px;
+    background-color: #3a59ff;
+    color: white;
     border-radius: 8px;
-    background: #00FFF0;
-    color: #0D1B2A;
-    font-weight: 600;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
-.hero-buttons .btn:hover {
-    background: #39FF14;
-    color: #000;
+button:hover {
+    background-color: #5872ff;
 }
 
-/* Features */
-#features {
-    padding: 60px 20px;
+footer {
     text-align: center;
-}
-
-#features h2 {
-    font-size: 40px;
-    margin-bottom: 40px;
-    color: #00FFF0;
-}
-
-.feature-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.card {
-    background: rgba(13,27,42,0.8);
-    padding: 25px;
-    border-radius: 12px;
-    width: 220px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    background: rgba(0,255,240,0.1);
-}
-
-.card h3 {
-    margin-bottom: 12px;
-    color: #39FF14;
-}
-
-/* Download Section */
-#download {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#download h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
-    color: #00FFF0;
-}
-
-.download-buttons .btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #0D1B2A;
-    background: #00FFF0;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.download-buttons .btn:hover {
-    background: #39FF14;
-    color: #000;
-}
-
-/* Docs */
-#docs {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#docs h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: #00FFF0;
-}
-
-/* About / Footer */
-#about {
-    padding: 40px 20px;
-    text-align: center;
-    background: rgba(13,27,42,0.95);
-}
-
-#about h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    color: #00FFF0;
-}
-
-#about a.btn {
-    margin-top: 15px;
+    margin-top: 200px;
+    padding: 20px;
+    color: #aaa;
 }
