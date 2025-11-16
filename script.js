@@ -1,17 +1,15 @@
-// Smooth scrolling handled by CSS scroll-behavior
-// Optional: you can add more JS for animations later
+// Mobile menu toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
 
-// Example: simple alert on download buttons for now
-document.querySelectorAll('#download .btn').forEach(btn => {
-    btn.addEventListener('click', e => {
-        e.preventDefault();
-        alert('Download link coming soon!');
-    });
+mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
 });
 
-document.querySelectorAll('#docs .btn').forEach(btn => {
+// Button placeholders
+document.querySelectorAll('.btn').forEach(btn => {
     btn.addEventListener('click', e => {
         e.preventDefault();
-        alert('Documentation coming soon!');
+        alert('Link coming soon!');
     });
 });
