@@ -18,7 +18,7 @@
 
 ## Demo / Screenshots
 
-*(Add images or GIFs of your engine here when ready)*
+*(Adding images or GIFs of my engine when its ready)*
 
 ```html
 <img src="assets/screenshot1.png" alt="Fluxx Engine Screenshot" width="300px">
