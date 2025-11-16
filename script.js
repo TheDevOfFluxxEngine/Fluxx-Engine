@@ -1,5 +1,17 @@
-function downloadFluxx() {
-    alert("Download coming soon!");
-    // later you can link to the launcher file
-    // window.location.href = "downloads/FluxxLauncher.exe";
-}
+// Smooth scrolling handled by CSS scroll-behavior
+// Optional: you can add more JS for animations later
+
+// Example: simple alert on download buttons for now
+document.querySelectorAll('#download .btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        alert('Download link coming soon!');
+    });
+});
+
+document.querySelectorAll('#docs .btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        alert('Documentation coming soon!');
+    });
+});
