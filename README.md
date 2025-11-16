@@ -1,17 +1,24 @@
 # Fluxx Engine
-Fluxx Engine is a lightweight, modular, and cross-platform game engine designed for creators who want to build, animate, and deploy games quickly.
 
-Key Features:
+**Cross-platform, modular game engine with intuitive UI for building, animating, and deploying games.**  
 
-Cross-platform support: Works on macOS and Windows (Linux coming soon)
+🌐 **Live Website:** [https://thedevoffluxxengine.github.io/Fluxx-Engine/](https://thedevoffluxxengine.github.io/Fluxx-Engine/)
 
-Easy-to-use UI: Intuitive interface for beginners and pros alike
+---
 
-Modular design: Add or remove components without breaking your project
+## Features
 
-High-performance: Optimized for smooth animations and fast rendering
+- **Cross-platform:** Works on macOS and Windows (Linux coming soon)  
+- **User-friendly UI:** Easy-to-use interface for both beginners and pros  
+- **Modular Design:** Add, remove, or customize components easily  
+- **High Performance:** Smooth animations and fast rendering  
+- **Future-ready:** Scale your projects from small prototypes to immersive worlds  
 
-Future-proof: Designed to scale with your projects, from small games to large interactive worlds
+---
 
-Vision:
-Fluxx Engine empowers developers to bring ideas to life faster, without being bogged down by complex setups or heavy software. It’s fast, flexible, and future-ready.
+## Demo / Screenshots
+
+*(Add images or GIFs of your engine here when ready)*
+
+```html
+<img src="assets/screenshot1.png" alt="Fluxx Engine Screenshot" width="300px">
