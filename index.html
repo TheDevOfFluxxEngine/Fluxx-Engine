@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fluxx Engine</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluxx Engine</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <img src="assets/logo.png" alt="Fluxx Engine Logo" class="logo">
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Docs</a>
-            <a href="#">Download</a>
-            <a href="#">About</a>
-        </nav>
-    </header>
+<header>
+  <img src="assets/logo.png" alt="Fluxx Engine Logo" class="logo">
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#features">Features</a>
+    <a href="#download">Download</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
 
-    <section class="hero">
-        <h1>Fluxx Engine</h1>
-        <p>Create • Animate • Build<br> A lightweight engine for creators.</p>
-        <button onclick="downloadFluxx()">Download</button>
-    </section>
+<section id="hero" class="hero">
+  <h1>Fluxx Engine</h1>
+  <p>Create • Animate • Build<br>A lightweight engine for creators.</p>
+  <button onclick="downloadFluxx()">Download</button>
+</section>
 
-    <footer>
-        <p>© 2025 Fluxx Engine — All Rights Reserved</p>
-    </footer>
+<section id="features" class="features">
+  <h2>Features</h2>
+  <div class="feature-cards">
+    <div class="card">
+      <h3>Cross-Platform</h3>
+      <p>Run your projects on Windows and macOS</p>
+    </div>
+    <div class="card">
+      <h3>User-Friendly UI</h3>
+      <p>Intuitive interface for creators of all levels</p>
+    </div>
+    <div class="card">
+      <h3>High Performance</h3>
+      <p>Smooth animations and fast rendering</p>
+    </div>
+  </div>
+</section>
 
-    <script src="script.js"></script>
+<section id="download" class="download">
+  <h2>Download</h2>
+  <button onclick="downloadFluxx()">Windows .exe</button>
+  <button onclick="downloadFluxx()">macOS .app</button>
+</section>
+
+<footer id="about">
+  <p>© 2025 Fluxx Engine — Developed by TheDevOfFluxxEngine</p>
+  <a href="https://github.com/TheDevOfFluxxEngine/Fluxx-Engine" target="_blank">GitHub Repo</a>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
