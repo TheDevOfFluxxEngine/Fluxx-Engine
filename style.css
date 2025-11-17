@@ -1,172 +1,476 @@
-/* Reset & Global */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-  background-color: #000000; /* True black */
+/* From Uiverse.io by Spacious74 */ 
+button:not(.download-btn) {
+  font-size: 1.4em;
+  padding: 0.6em 0.8em;
+  border-radius: 0.5em;
+  border: none;
+  background-color: #000;
   color: #fff;
-  scroll-behavior: smooth;
+  cursor: pointer;
+  box-shadow: 2px 2px 3px #000000b4;
+}
+.layout
+{ 
+position:relative;
+}
+.download-btn {
+    all: unset;
+    display: inline-block;
+    font-size: 1.4em;
+    padding: 0.6em 1.2em;
+    border-radius: 0.5em;
+    background-color: black;
+    color: white;
+    cursor: pointer;
 }
 
-/* Header */
-header {
-  width: 100%;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  background: rgba(20, 20, 20, 0.95);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+.download-container {
+  position: relative;
   z-index: 100;
+  display: inline-block; /* container shrinks to button size */
+  padding: 10px 20px; /* space around button */
+  border-radius: 1em;
+  margin: 40px 0 40px 80px;  /* move right by increasing the last value */
+
 }
 
-.logo {
-  height: 50px;
+.download-container::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 1em;
+  background: linear-gradient(90deg, #03a9f4, #f441a5);
+  filter: blur(1em); /* more blur = bigger glow */
+  opacity: 0.8; /* increase brightness */
+  z-index: -1;
+  transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
-nav a {
-  color: #ccc;
-  margin-left: 25px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
+.download-container:hover::before {
+  filter: blur(2em); /* glow expands on hover */
+  opacity: 1;        /* fully bright on hover */
 }
 
-nav a:hover {
-  color: #3a59ff;
-}
-
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 150px 20px 100px;
-  background: linear-gradient(180deg, #000000, #111111);
-}
-
-.hero h1 {
-  font-size: 70px;
-  color: #00fff0;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 22px;
-  color: #ccc;
-  margin-bottom: 40px;
-  line-height: 1.5;
-}
-
-.hero button {
-  padding: 16px 40px;
-  font-size: 18px;
-  font-weight: bold;
+.download-container button {
+  font-size: 1.4em;
+  padding: 0.6em 1.2em;
+  border-radius: 0.5em;
   border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  background: linear-gradient(135deg, #3a59ff, #6c8eff);
+  background-color: #000;
   color: #fff;
-  transition: 0.3s;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.2s ease;
 }
 
-.hero button:hover {
-  background: linear-gradient(135deg, #5872ff, #8aa3ff);
-  box-shadow: 0 0 20px #3a59ff;
+.download-container button:hover {
+  transform: scale(1.05); /* slight pop effect */
 }
 
-/* Features */
-.features {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.features h2 {
-  font-size: 48px;
-  color: #00fff0;
-  margin-bottom: 50px;
-}
-
-.feature-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.card {
-  background: #111;
-  padding: 30px;
-  border-radius: 15px;
-  width: 250px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  background: #222;
-  box-shadow: 0 0 20px #3a59ff;
-}
-
-.card h3 {
-  color: #39ff14;
-  margin-bottom: 15px;
-}
-
-.card p {
-  color: #ccc;
+/* From Uiverse.io by neerajbaniwal */ 
+.btn-shine {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 48px;
+  color: #fff;
+  background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
+  background-position: 0;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
   font-size: 16px;
-}
-
-/* Download */
-.download {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.download h2 {
-  font-size: 48px;
-  color: #00fff0;
-  margin-bottom: 30px;
-}
-
-.download button {
-  margin: 10px;
-  padding: 14px 32px;
-  font-size: 18px;
-  border-radius: 10px;
-  border: none;
-  background: linear-gradient(135deg, #3a59ff, #6c8eff);
-  cursor: pointer;
-  color: #fff;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.download button:hover {
-  background: linear-gradient(135deg, #5872ff, #8aa3ff);
-  box-shadow: 0 0 15px #3a59ff;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 40px 20px;
-  background: #111;
-  color: #888;
-  font-size: 14px;
-}
-
-footer a {
-  color: #3a59ff;
   text-decoration: none;
-  margin-left: 10px;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+}
+@-moz-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-o-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+/* From Uiverse.io by faxriddin20 */ 
+/* ----------------------------- */
+/*  CLEAN ICON BAR UI (SAFE)     */
+/* ----------------------------- */
+
+.button-container {
+  display: flex;
+  background-color: #000;
+  width: 250px;
+  height: 45px;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  z-index: 9999999999;
 }
 
-footer a:hover {
-  text-decoration: underline;
+/* This resets ALL global button styles */
+.icon-btn 
+ {
+  all: unset; 
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  color: white;
+}
+
+/* Hover pop animation */
+.icon-btn:hover {
+  transform: translateY(-4px);
+  opacity: 0.8;
+}
+
+/* Icon size inside buttons */
+.icon {
+  font-size: 22px;
+  pointer-events: none; /* prevents text-selection weirdness */
+}
+
+/* LEFT BORDER BAR */
+.icon-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px; /* thickness of sidebar */
+  height: 100vh;
+  background-color: #0a0a0a; /* subtle dark */
+  border-right: 2px solid #222; /* clean border line */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999999999 ;
+}
+
+/* Align icons vertically inside the bar */
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+/* BACKGROUND ANIMATION CONTAINER */
+.list-container {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  min-height: 100vh;
+  --c: #09f;
+  background-color: #000;
+  background-image: radial-gradient(4px 100px at 0px 235px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 235px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 117.5px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 252px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 252px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 126px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 150px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 150px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 75px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 253px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 253px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 126.5px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 204px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 204px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 102px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 134px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 134px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 67px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 179px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 179px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 89.5px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 299px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 299px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 149.5px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 215px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 215px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 107.5px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 281px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 281px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 140.5px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 158px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 158px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 79px, var(--c) 100%, #0000 150%),
+    radial-gradient(4px 100px at 0px 210px, var(--c), #0000),
+    radial-gradient(4px 100px at 300px 210px, var(--c), #0000),
+    radial-gradient(1.5px 1.5px at 150px 105px, var(--c) 100%, #0000 150%);
+  
+  background-size:
+    300px 235px, 300px 235px, 300px 235px,
+    300px 252px, 300px 252px, 300px 252px,
+    300px 150px, 300px 150px, 300px 150px,
+    300px 253px, 300px 253px, 300px 253px,
+    300px 204px, 300px 204px, 300px 204px,
+    300px 134px, 300px 134px, 300px 134px,
+    300px 179px, 300px 179px, 300px 179px,
+    300px 299px, 300px 299px, 300px 299px,
+    300px 215px, 300px 215px, 300px 215px,
+    300px 281px, 300px 281px, 300px 281px,
+    300px 158px, 300px 158px, 300px 158px,
+    300px 210px, 300px 210px, 300px 210px;
+
+  animation: hi 150s linear infinite;
+  z-index: -1;      /* keep animation behind content */
+  overflow: hidden; /* prevents scroll issues */
+}
+
+/* RAIN OVERLAY */
+.list-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -20; /* behind everything */
+  background-image: radial-gradient(
+    ellipse 1.5px 2px at 1.5px 50%,
+    #0000 0,
+    #0000 90%,
+    #000 100%
+  );
+  background-size: 25px 8px;
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes hi {
+  0% {
+    background-position:
+      0px 220px, 3px 220px, 151.5px 337.5px,
+      25px 24px, 28px 24px, 176.5px 150px,
+      50px 16px, 53px 16px, 201.5px 91px,
+      75px 224px, 78px 224px, 226.5px 350.5px,
+      100px 19px, 103px 19px, 251.5px 121px,
+      125px 120px, 128px 120px, 276.5px 187px,
+      150px 31px, 153px 31px, 301.5px 120.5px,
+      175px 235px, 178px 235px, 326.5px 384.5px,
+      200px 121px, 203px 121px, 351.5px 228.5px,
+      225px 224px, 228px 224px, 376.5px 364.5px,
+      250px 26px, 253px 26px, 401.5px 105px,
+      275px 75px, 278px 75px, 426.5px 180px;
+  }
+  100% {
+    background-position:
+      0px 6800px, 3px 6800px, 151.5px 6917.5px,
+      25px 13632px, 28px 13632px, 176.5px 13758px,
+      50px 5416px, 53px 5416px, 201.5px 5491px,
+      75px 17175px, 78px 17175px, 226.5px 17301.5px,
+      100px 5119px, 103px 5119px, 251.5px 5221px,
+      125px 8428px, 128px 8428px, 276.5px 8495px,
+      150px 9876px, 153px 9876px, 301.5px 9965.5px,
+      175px 13391px, 178px 13391px, 326.5px 13540.5px,
+      200px 14741px, 203px 14741px, 351.5px 14848.5px,
+      225px 18770px, 228px 18770px, 376.5px 18910.5px,
+      250px 5082px, 253px 5082px, 401.5px 5161px,
+      275px 6375px, 278px 6375px, 426.5px 6480px;
+  }
+}
+.features-box {
+  padding-left: 60px;
+  padding-top: 10px;
+  position: relative;
+  z-index: 5;
+}
+
+.features-box ul {
+  padding-left: 20px;
+  color: white;
+  line-height: 1.8em;
+}
+
+.download-container {
+  margin-top: 20px; /* pushes button below the last <li> */
+  display: inline-block;
+  position: relative;
+  z-index: 20;
+}
+.list-container {
+  position: relative;
+  z-index: 1;   /* NOT NEGATIVE anymore */
+}
+
+.download-container {
+  position: relative;
+  z-index: 9999; /* button always on top */
+}
+/* From Uiverse.io by Codewithvinay */ 
+.featurez-box {
+ position: relative;
+ width: 220px;
+ height: 300px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: 0.5s;
+ z-index: 1;
+ margin-left: 20px;
+}
+
+.featurez-box::before {
+ content: ' ';
+ position: absolute;
+ top: 0;
+ left: 50px;
+ width: 50%;
+ height: 100%;
+ text-decoration: none;
+ background: #fff;
+ border-radius: 8px;
+ transform: skewX(15deg);
+ transition: 0.5s;
+}
+
+.featurez-box::after {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 50;
+ width: 50%;
+ height: 100%;
+ background: #fff;
+ border-radius: 8px;
+ transform: skewX(15deg);
+ transition: 0.5s;
+ filter: blur(30px);
+}
+
+.featurez-box:hover:before,
+.box:hover:after {
+ transform: skewX(0deg) scaleX(1.3);
+}
+
+.featurez-box:before,
+.box:after {
+ background: linear-gradient(315deg, #ffbc00, #ff0058)
+}
+
+.feature-box span {
+ display: block;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ z-index: 5;
+ pointer-events: none;
+}
+
+.featurez-box span::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 0;
+ height: 0;
+ border-radius: 8px;
+ background: rgba(255, 255, 255, 0.1);
+ backdrop-filter: blur(10px);
+ opacity: 0;
+ transition: 0.1s;
+ animation: animate 2s ease-in-out infinite;
+ box-shadow: 0 5px 15px rgba(0,0,0,0.08)
+}
+
+.featurez-box span::before {
+ top: -40px;
+ left: 40px;
+ width: 50px;
+ height: 50px;
+ opacity: 1;
+}
+
+.featurez-box span::after {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ width: 100%;
+ height: 100%;
+ border-radius: 8px;
+ background: rgba(255, 255, 255, 0.1);
+ backdrop-filter: blur(10px);
+ opacity: 0;
+ transition: 0.5s;
+ box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+ animation-delay: -1s;
+}
+
+.featurez-box span:after {
+ bottom: -40px;
+ right: 40px;
+ width: 50px;
+ height: 50px;
+ opacity: 1;
+}
+
+.featurez-box .content {
+ position: relative;
+ width: 190px;
+ height: 254px;
+ padding: 20px 40px;
+ background: rgba(255, 255, 255, 0.05);
+ backdrop-filter: blur(10px);
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ border-radius: 8px;
+ z-index: 1;
+ transform: 0.5s;
+ color: #fff;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.featurez-box .content h2 {
+ font-size: 20px;
+ color: #fff;
+ margin-bottom: 10px;
 }
