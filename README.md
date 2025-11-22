@@ -17,8 +17,12 @@
 ---
 
 ## Demo / Screenshots
-
-*(Adding images or GIFs of my engine when its ready)*
-
+Iam Cure=rently Building the Engine with C++ (for Core of the Engine)and Java (for Security)
+V.0.0.1 "Preheat"
+is still in development and still need code signed certificate to install my program on your computer
+But Feel Free to install the engine while its in development 
+Deployment Schedule
+-May 2026
+-....
+-....
 ```html
-<img src="assets/screenshot1.png" alt="Fluxx Engine Screenshot" width="300px">
