@@ -17,12 +17,14 @@
 ---
 
 ## Demo / Screenshots
-Iam Cure=rently Building the Engine with C++ (for Core of the Engine)and Java (for Security)
+Iam Currently Building the Engine with C++ (for Core of the Engine)and Java (for Security)
 V.0.0.1 "Preheat"
 is still in development and still need code signed certificate to install my program on your computer
 But Feel Free to install the engine while its in development 
 Deployment Schedule
 -May 2026
+Sry guys 🗿 a little delay on the 👀 release of the engine , its currently 👀 in Beta stage and not in production phase ,but please be patient as it will come next month
+-July 2026
 -....
 -....
 ```html
